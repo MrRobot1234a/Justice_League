@@ -1,0 +1,563 @@
+@import url(https://fonts.googleapis.com/css2?family=Marcellus&family=Mulish:wght@400;700;800&display=swap)
+
+$white: rgb(255, 255, 255)
+$bg-colorForGradient: rgb(50,108,255)
+$bg-gradient: linear-gradient(149deg, rgba(50,108,255,1) 0%, rgba(38,255,242,1) 100%)
+$margin-right: 1.5rem
+$margin-bottom: 1.5rem
+
+*
+    box-sizing: border-box
+
+html
+    font-size: 10px
+
+body
+    font-size: 16px
+    background-color: black
+    /* font-family: 'Marcellus', serif */
+    font-family: 'Mulish', sans-serif
+
+
+
+.header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin: 0 auto
+    padding: 2.5rem 1.5rem 2.5rem 1.5rem
+    height: 10rem
+    width: 143.6rem
+    &-nav
+        width: 38.5rem
+        display: flex
+        justify-content: space-between
+        &-link
+            text-decoration: none
+            color: rgba($white, .5)
+            transition: .2s ease color
+            &:hover
+                color: rgba($white, 1)
+            &::after
+                content: ''
+                opacity: 0
+                width: 100%
+                display: block
+                height: .2rem
+                border-radius: .5rem
+                background: $bg-colorForGradient
+                background: $bg-gradient
+                margin-top: 0.9rem
+    &-btns
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 20.8rem
+        &-btn
+            &_search
+                border: none
+                outline: none
+                background-color: transparent
+                background: url("../img/header/search.svg") center center/cover no-repeat
+                width: 1.8rem
+                height: 1.8rem
+                cursor: pointer
+            &_notice
+                background-color: transparent
+                border: none
+                outline: none
+                background: url("../img/header/notice.svg") center center/cover no-repeat
+                width: 2.20rem
+                height: 2.40rem
+                cursor: pointer
+            &_account
+                background-color: transparent
+                border: none
+                outline: none
+                background: url("../img/header/account.svg") center center/cover no-repeat
+                width: 1.8rem
+                height: 1.92rem
+                cursor: pointer
+
+.section_banner
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 41%, rgba(255,255,255,0) 70%);
+    border-bottom: .2rem solid #2F2E2E
+    position: relative
+    img
+        position: absolute
+        top: 0
+        right: 0
+        height: 100%
+        z-index: -1
+
+.container
+    width: 143.6rem
+    margin: 0 auto
+    padding: 0 1.5rem 0 1.5rem
+    color: $white
+    .banner
+        width: 56.2rem
+        padding: 12.2rem 0 20.3rem 0
+        .banner-title
+            font-family: 'Marcellus', serif
+            font-weight: 400
+            font-size: 8rem
+            line-height: 7rem
+        .banner-info
+            margin-top: 7rem
+            font-weight: 800
+            line-height: .1rem
+            &_year
+                margin-right: 1.816rem
+            &_age
+                margin-right: 3.412rem
+                width: 2.888rem
+                height: 1.2rem
+                position: relative
+                padding: .2rem 0 0 1.6rem;
+                &::after
+                    content: ''
+                    position: absolute
+                    left: 0
+                    top: 0
+                    width: 5.975rem
+                    height: 2.4rem
+                    background: url('../img/section-banner/border.svg') center center/cover no-repeat
+            &_time
+                margin-right: 4.133rem
+            &_rating
+                width: 7.967rem
+                position: relative
+                &::before
+                    content: ''
+                    position: absolute
+                    left: 3.5rem
+                    top: 0.2rem
+                    width: 1.6rem
+                    height: 1.5rem
+                    background: url('../img/section-banner/star.svg') center center/cover no-repeat
+
+        .banner-descr
+            width: 50.7rem
+            margin-top: 2.5rem
+            font-family: 'Mulish', sans-serif
+            font-weight: 400
+            font-size: 1.8rem
+            line-height: 2.8rem
+            color: #C2C2C2;
+        .banner-btns
+            margin-top: 3.5rem
+            &-btn_watch
+                position: relative
+                width: 14.1rem
+                height: 5rem
+                border: none
+                border-radius: 100rem
+                outline: none
+                padding: 1.5rem 3rem 1.5rem 5.9rem
+                font-weight: 800
+                color: $white
+                margin-right: 3rem
+                background-color: transparent
+                background: $bg-colorForGradient
+                background: $bg-gradient
+                cursor: pointer
+                transition: .2s ease box-shadow
+                &:hover
+                    box-shadow: 0px 4px 50px rgba(50, 108, 255, 0.5)
+                &::after
+                    content: ''
+                    left: 3rem
+                    width: 1.4rem
+                    height: 1.8rem
+                    position: absolute
+                    background: url('../img/section-banner/play.svg')center center/cover no-repeat
+            &-btn_more
+                width: 19.5rem
+                height: 5rem
+                border: none
+                border-radius: 10rem
+                outline: none
+                font-weight: 800
+                color: #323232
+                padding: 1.5rem 3rem
+                cursor: pointer
+                transition: .2s ease color, .2s ease background-color 
+                &:hover
+                    color: $white
+                    background-color: transparent
+                    
+.section
+    &__movies
+        .container
+            .poster
+                &-title
+                    font-weight: 700
+                    font-size: 2.8rem
+                    position: relative
+                    margin-top: 6rem
+                    padding: 0 0 0 1.9rem
+                    width: 31.1rem
+                    span
+                        display: inline-block
+                        height: 1.6rem
+                        left: 10rem
+                        // position: relative
+                        &::before
+                            content: ''
+                            height: .3rem
+                            width: 1.8rem
+                            position: absolute
+                            right: 0
+                            top: .9rem
+                            border-radius: 5rem
+                            background-color: $white
+                            transform: rotate(45deg)
+                            border-radius: 5rem
+                        &::after
+                            content: ''
+                            height: .3rem
+                            width: 1.8rem
+                            position: absolute
+                            right: 0
+                            bottom: .9rem
+                            border-radius: 5rem
+                            background-color: $white
+                            transform: rotate(-45deg)
+                            border-radius: 5rem
+                    &::before
+                        content: ''
+                        position: absolute
+                        left: 0
+                        top: 0
+                        background: $bg-colorForGradient
+                        background: $bg-gradient
+                        width: .8rem
+                        height: 3.5rem
+                        border-radius: 5rem
+                    &__2
+                        width: 26.7rem
+                    &__3
+                        width: 25.6rem
+                    &__4
+                        width: 40.5rem
+                &-movies
+                    margin-top: 4rem
+                    display: flex
+                    justify-content: space-between
+                    &__link
+                        width: 20.6rem
+                        height: 30.9rem
+                        img
+                            display: inline-block
+                            border-radius: 2.5rem
+                            filter: drop-shadow(0px 0px 0px rgba(44, 176, 249, 0.5));
+                            transition: .2s ease filter
+                            &:hover
+                                filter: drop-shadow(0px 0px 20px rgba(44, 176, 249, 0.5));
+                &-btn
+                    width: 14.1rem
+                    height: 5rem
+                    border: none
+                    outline: none
+                    border-radius: 10rem
+                    padding: 1.5rem 3.4rem
+                    background: $bg-colorForGradient
+                    background: $bg-gradient
+                    cursor: pointer
+                    margin-top: 5.5rem
+                    transition: .2s ease box-shadow
+                    &:hover
+                        box-shadow: 0px 4px 50px rgba(50, 108, 255, 0.5)
+                &-genres
+                    margin-top: 4.7rem
+                    display: flex
+                    flex-flow: row wrap
+                    &-item
+                        &__1
+                            width: 34rem
+                            height: 19.8rem
+                            background-color: transparent
+                            border: none
+                            outline: none
+                            background: rgb(253,9,63)
+                            background: linear-gradient(90deg, rgba(253,9,63,1) 0%, rgba(243,131,241,1) 100%)
+                            border-radius: 2rem
+                            margin-right: $margin-right
+                            margin-bottom: $margin-bottom
+                            cursor: pointer
+                            &__wrap
+                                width: 12.5rem
+                                height: 10.8rem
+                                margin: 0 auto
+                                &__descr
+                                    font-size: 2.8rem
+                                    font-weight: 700
+                                    text-align: center
+                                    color: $white
+                        &__2
+                            width: 34rem
+                            height: 19.8rem
+                            background-color: transparent
+                            border: none
+                            outline: none
+                            background: rgb(15,255,218);
+                            background: linear-gradient(90deg, rgba(15,255,218,1) 0%, rgba(60,219,119,1) 100%);
+                            border-radius: 2rem
+                            margin-right: $margin-right
+                            margin-bottom: $margin-bottom
+                            cursor: pointer
+                            &__wrap
+                                margin: 0 auto
+                                &__descr
+                                    font-size: 2.8rem
+                                    font-weight: 700
+                                    text-align: center
+                                    color: $white
+                        &__3
+                            width: 34rem
+                            height: 19.8rem
+                            background-color: transparent
+                            border: none
+                            outline: none
+                            background: rgb(185,54,255);
+                            background: linear-gradient(146deg, rgba(185,54,255,1) 0%, rgba(87,222,218,1) 100%);
+                            border-radius: 2rem
+                            margin-right: $margin-right
+                            margin-bottom: $margin-bottom
+                            cursor: pointer
+                            &__wrap
+                                margin: 0 auto
+                                &__descr
+                                    font-size: 2.8rem
+                                    font-weight: 700
+                                    text-align: center
+                                    color: $white
+                        &__4
+                            width: 34rem
+                            height: 19.8rem
+                            background-color: transparent
+                            border: none
+                            outline: none
+                            background: rgb(253,9,63);
+                            background: linear-gradient(90deg, rgba(253,9,63,1) 0%, rgba(251,19,120,1) 50%, rgba(252,203,26,1) 100%);
+                            border-radius: 2rem
+                            margin-bottom: $margin-bottom
+                            cursor: pointer
+                            &__wrap
+                                margin: 0 auto
+                                &__descr
+                                    font-size: 2.8rem
+                                    font-weight: 700
+                                    text-align: center
+                                    color: $white
+                        &__5
+                            width: 34rem
+                            height: 19.8rem
+                            background-color: transparent
+                            border: none
+                            outline: none
+                            background: rgb(255,100,114);
+                            background: linear-gradient(90deg, rgba(255,100,114,1) 0%, rgba(253,167,93,1) 100%);
+                            border-radius: 2rem
+                            margin-right: $margin-right
+                            cursor: pointer
+                            &__wrap
+                                margin: 0 auto
+                                &__descr
+                                    font-size: 2.8rem
+                                    font-weight: 700
+                                    text-align: center
+                                    color: $white
+                        &__6
+                            width: 34rem
+                            height: 19.8rem
+                            background-color: transparent
+                            border: none
+                            outline: none
+                            background: rgb(19,84,122);
+                            background: linear-gradient(90deg, rgba(19,84,122,1) 0%, rgba(128,208,199,1) 100%);
+                            border-radius: 2rem
+                            margin-right: $margin-right
+                            cursor: pointer
+                            &__wrap
+                                margin: 0 auto
+                                &__descr
+                                    font-size: 2.8rem
+                                    font-weight: 700
+                                    text-align: center
+                                    color: $white
+                        &__7
+                            width: 34rem
+                            height: 19.8rem
+                            background-color: transparent
+                            border: none
+                            outline: none
+                            background: rgb(255,247,123);
+                            background: linear-gradient(90deg, rgba(255,247,123,1) 0%, rgba(255,191,66,1) 100%);
+                            border-radius: 2rem
+                            margin-right: $margin-right
+                            cursor: pointer
+                            &__wrap
+                                margin: 0 auto
+                                &__descr
+                                    font-size: 2.8rem
+                                    font-weight: 700
+                                    text-align: center
+                                    color: $white
+                        &__8
+                            width: 34rem
+                            height: 19.8rem
+                            background-color: transparent
+                            border: none
+                            outline: none
+                            background: rgb(31,162,255);
+                            background: linear-gradient(90deg, rgba(31,162,255,1) 0%, rgba(31,162,255,1) 50%, rgba(31,83,92,1) 100%);
+                            border-radius: 2rem
+                            cursor: pointer
+                            &__wrap
+                                margin: 0 auto
+                                &__descr
+                                    font-size: 2.8rem
+                                    font-weight: 700
+                                    text-align: center
+                                    color: $white
+                &-actors
+                    &__wrap
+                        display: flex
+                        justify-content: space-between
+                        margin-top: 4.465rem
+                        &__actor
+                            width: 19.1rem
+                            height: 23.2rem
+                            img
+                                width: 19rem
+                                height: 19rem
+                                border-radius: 10rem
+                            &__descr
+                                text-align: center
+                                margin-top: 2.4rem
+                                font-size: 1.8rem
+                                font-weight: 700
+                &-register
+                    margin-top: 10.3rem
+                    &__wrap
+                        display: flex
+                        height: 34.1rem
+                        position: relative
+                        background: rgb(13,26,115);
+                        background: linear-gradient(90deg, rgba(13,26,115,1) 0%, rgba(0,0,0,1) 75%);
+                        border-radius: 2rem
+                        &__img
+                            position: absolute
+                            left: 0
+                            top: 0
+                            width: 50%
+                            height: 100%
+                            border-top-left-radius: 2rem
+                            border-bottom-left-radius: 2rem
+                        &__block
+                            padding: 7.1rem 0 0 0
+                            position: absolute
+                            top: 0
+                            right: 0
+                            width: 50%
+                            height: 100%
+                            border-top-right-radius: 2rem
+                            border-bottom-right-radius: 2rem
+                            &__img
+                                display: block
+                                width: 29.4rem
+                                height: 14.8rem
+                                margin: 0 auto
+                            &__descr
+                                font-weight: 700
+                                font-size: 6.4rem
+                                text-align: center
+                    &__now
+                        margin: 0 auto
+                        margin-top: 12.1rem
+                        width: 122.4rem
+                        height: 27rem
+                        border-radius: 2rem
+                        background: url('../img/posters/register/register03.png')
+                        position: relative
+                        padding: 7.1rem 0 0 5.7rem
+                        &__descr
+                            width: 79.2rem
+                            height: 12.8rem
+                            font-weight: 700
+                            font-size: 6.4rem
+                            line-height: 6.4rem
+                        &__btn
+                            position: absolute
+                            right: 15.2rem
+                            top: 11rem
+                            width: 14.1rem
+                            height: 5rem
+                            border: none
+                            outline: none
+                            border-radius: 10rem
+                            background: $bg-colorForGradient
+                            background: $bg-gradient
+                            font-weight: 800
+                            color: $white
+                            cursor: pointer
+
+.section-footer
+    margin-top: 12.1rem
+    background-color: #101012
+    padding: 7rem 0 7rem 21.5rem
+    overflow: hidden
+    .footer
+        
+        &-wrap
+            display: flex
+            &-logo
+                width: 15.7rem
+                height: 7rem
+                margin-right: 8.4rem
+            &__1
+                width: 19.8rem
+                height: 15rem
+                margin-right: 5.2rem
+                a
+                    font-size: 1.8rem
+                    font-weight: 600
+                    line-height: 2rem
+                    text-decoration: none
+                    color: #C2C2C2
+            &__2
+                width: 15.5rem
+                height: 12rem
+                margin-right: 5.2rem
+                a
+                    font-size: 1.8rem
+                    font-weight: 600
+                    line-height: 2rem
+                    text-decoration: none
+                    color: #C2C2C2
+            &__3
+                width: 17.4rem
+                height: 12rem
+                margin-right: 5.2rem
+                a
+                    font-size: 1.8rem
+                    font-weight: 600
+                    line-height: 2rem
+                    text-decoration: none
+                    color: #C2C2C2
+            &__4
+                width: 20.1rem
+                height: 12rem
+                a
+                    font-size: 1.8rem
+                    font-weight: 600
+                    line-height: 2rem
+                    text-decoration: none
+                    color: #C2C2C2
+.active
+    color: rgba(255, 255, 255, 1)
+    &::after
+        opacity: 1
